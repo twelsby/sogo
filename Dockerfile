@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 MAINTAINER Trevor Welsby <trevor@welsby.de>
 
@@ -19,7 +19,7 @@ RUN apt-get update \
    && a2enmod rewrite \
    && service apache2 start \
    && apt-key adv --keyserver keys.gnupg.net --recv-key 0x810273C4 \
-   && echo 'deb http://packages.inverse.ca/SOGo/nightly/4/ubuntu/ bionic bionic' >> /etc/apt/sources.list \
+   && echo 'deb http://packages.inverse.ca/SOGo/nightly/5/ubuntu/ focal focal' >> /etc/apt/sources.list \
    && apt-get update \
    #&& update-rc.d apache2 defaults \
    && mkdir -p /usr/share/doc/sogo \
