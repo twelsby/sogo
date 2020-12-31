@@ -8,6 +8,8 @@ ARG version=1.0.0
 
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DontWarn
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update \
    && apt-get install -y gnupg2 apache2 mariadb-client \
    && ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime \
