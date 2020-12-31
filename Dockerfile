@@ -29,7 +29,6 @@ RUN apt-get update \
    && apt-get install -y sogo \
    && rm /usr/share/doc/sogo/dummy.sh \
    && apt-get install -y sogo-activesync sope4.9-gdl1-mysql \
-   && ln -s /etc/apache2/conf.d/SOGo.conf /etc/apache2/conf-available/SOGo.conf \
    && a2enconf SOGo
 
 EXPOSE 20000
